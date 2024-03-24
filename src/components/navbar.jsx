@@ -5,6 +5,14 @@ import cartIcon from "../assets/icons/cart.svg";
 import likedIcon from "../assets/icons/heart.svg";
 
 const Nav = styled.nav`
+  position: fixed;
+  z-index: 11111111;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+`;
+
+const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +29,7 @@ const Nav = styled.nav`
   }
 `;
 
-const LinksDiv = styled.div`
+const Links = styled.div`
   gap: 25px;
 
   & a {
@@ -34,10 +42,10 @@ const LinksDiv = styled.div`
   }
 `;
 
-const Div = styled.div`
+const Buttons = styled.div`
   gap: 20px;
 
-  & button{
+  & button {
     width: 25px;
     height: 25px;
     background-color: inherit;
@@ -46,7 +54,7 @@ const Div = styled.div`
     outline: none;
   }
 
-  & img{
+  & img {
     width: 100%;
   }
 `;
@@ -56,36 +64,38 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <div>
-        <h2>RentDrobe</h2>
-      </div>
+      <NavContainer>
+        <div>
+          <h2>RentDrobe</h2>
+        </div>
 
-      <LinksDiv>
-        <NavLink to="/" className={isActiveClass}>
-          Home
-        </NavLink>
-        <NavLink to="/store" className={isActiveClass}>
-          Store
-        </NavLink>
-        <NavLink to="/about" className={isActiveClass}>
-          About
-        </NavLink>
-        <NavLink to="/contact" className={isActiveClass}>
-          Contact
-        </NavLink>
-      </LinksDiv>
+        <Links>
+          <NavLink to="/" className={isActiveClass}>
+            Home
+          </NavLink>
+          <NavLink to="/store" className={isActiveClass}>
+            Store
+          </NavLink>
+          <NavLink to="/about" className={isActiveClass}>
+            About
+          </NavLink>
+          <NavLink to="/contact" className={isActiveClass}>
+            Contact
+          </NavLink>
+        </Links>
 
-      <Div>
-        <button>
-          <img src={likedIcon} alt="" />
-        </button>
-        <button>
-          <img src={loginIcon} alt="" />
-        </button>
-        <button>
-          <img src={cartIcon} alt="" />
-        </button>
-      </Div>
+        <Buttons>
+          <button>
+            <img src={likedIcon} alt="" />
+          </button>
+          <button>
+            <img src={loginIcon} alt="" />
+          </button>
+          <button>
+            <img src={cartIcon} alt="" />
+          </button>
+        </Buttons>
+      </NavContainer>
     </Nav>
   );
 };

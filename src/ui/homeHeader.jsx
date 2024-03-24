@@ -8,13 +8,15 @@ export const H1 = styled.h1`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  height: calc(100vh - 88px);
+  height: calc(100vh - 80px);
+  top: 88px;
   padding-left: 80px;
   padding-bottom: 120px;
   font-size: 80px;
   z-index: 111111;
   color: #fff;
   transition: all 1s;
+  line-height: 1.2;
 
   & span {
     text-align: left;
