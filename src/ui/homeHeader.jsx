@@ -9,7 +9,6 @@ export const H1 = styled.h1`
   align-items: flex-start;
   width: 100%;
   height: calc(100vh - 80px);
-  top: 88px;
   padding-left: 80px;
   padding-bottom: 120px;
   font-size: 80px;
@@ -18,12 +17,12 @@ export const H1 = styled.h1`
   transition: all 1s;
   line-height: 1.2;
 
-  & span {
+  span {
     text-align: left;
     color: #b8b1b1;
   }
 
-  & button {
+  button {
     font-size: 22px;
     border: 3px solid #eee;
     color: #eee;
@@ -33,7 +32,7 @@ export const H1 = styled.h1`
     padding: 10px 30px;
   }
 
-  & button:hover {
+  button:hover {
     border: 3px solid transparent;
     background-color: #d69327;
   }

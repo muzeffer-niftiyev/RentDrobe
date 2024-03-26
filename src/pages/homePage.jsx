@@ -1,11 +1,13 @@
 import HomeSlider from "../components/homeSlider";
-import OurMissionSection from "../components/ourMissionSection";
+import OurMission from "../components/ourMission";
+import Services from "../components/services";
 
 const HomePage = () => {
   return (
     <>
       <HomeSlider />
-      <OurMissionSection />
+      <OurMission/>
+      <Services/>
     </>
   );
 };
